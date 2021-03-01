@@ -1,0 +1,8 @@
+<nav>
+    {% for item in site.data.nav %}
+    <span>
+        <a href="{{ item.url }}">{{ item.title }}</a>
+        <div class='underline'></div>
+    </span>
+    {% endfor %}
+</nav>
