@@ -2,8 +2,9 @@
 layout: default
 ---
 
+<h1>{{ page.title }}</h1>
 <div class="post">
-    <h1>{{ page.title }}</h1>
+    {% if page.date %}
     <p class="post-date">
         {{ page.date | date_to_string }}
         {% if page.author %}
@@ -11,10 +12,12 @@ layout: default
         {{ page.author }}
         {% endif %}
     </p>
+    {% endif %}
+
     {% for tag in page.tags %}
     <span class="tag">
         <a href="{{ site.baseurl }}{{ site.data.nav[2].url }}#{{ tag }}">{{ tag }}</a>
     </span>
     {% endfor %}
-    {{ content }}
 </div>
+{{ content }}

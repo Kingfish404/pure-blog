@@ -1,0 +1,29 @@
+<div class="connect">
+    {% if site.email %}
+    <p>
+        Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </p>
+    {% endif %}
+
+    {% if site.github_username %}
+    <p>
+        Github: <a href="https://github.com/{{ site.github_username }}">{{ site.github_username }}</a>
+    </p>
+    {% endif %}
+
+    {% if site.twitter_username %}
+    <p>
+        Twiter: <a href="https://twitter.com/{{ site.twitter_username }}">{{ site.twitter_username }}</a>
+    </p>
+    {% endif %}
+</div>
+
+<style>
+    .connect {
+        text-align: center;
+        margin-top: 100px;
+    }
+    .connect p{
+        margin: 1em;
+    }
+</style>

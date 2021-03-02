@@ -1,9 +1,7 @@
 ---
-layout: default
+layout: page
 title: About
 ---
-
-# About
 
 This page is `/pages/about.md`.
 
@@ -13,3 +11,4 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ut non quo nostru
 
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus libero nulla, laboriosam quisquam aut sit quas dignissimos, earum nisi deleniti qui doloribus exercitationem nam totam impedit enim itaque reiciendis provident?
 
+{% include connect.html %}

@@ -1,7 +1,47 @@
 .post{
    h1{
-        border-bottom: 2px solid gray;
+        padding-bottom: 0.25em;
+        border-bottom: 2px solid rgba(158, 158, 158, 0.795);
    }
+
+   p,li{
+        line-height: 1.75em;
+        word-break: break-word;
+        color: #333;
+   }
+
+   >p{
+        letter-spacing: 0.6px;
+   }
+
+   code{
+       line-height: 1.5em;
+   }
+
+   a{
+        word-break: break-word;
+        text-decoration: none;
+   }
+
+   img{
+        width: 100%;
+    }
+
+    pre{
+        overflow: auto;
+        white-space: pre-wrap;
+    }
+
+    li{
+        margin: 5px auto;
+    }
+
+    table{
+
+        tr{
+            text-align: left;
+        }
+    }
 
    .post-date{
         display: inline-block;
@@ -12,9 +52,10 @@
         float: right;
         margin:0 0.25em;
         user-select: none;
-        line-height: 1.5em;
-        padding: 0 0.5em;
-        background-color: rgba(128, 128, 128, 0.11);
+        line-height: 2.25em;
+        padding: 0 0.1em;
+        background-color: unset;
         border-radius: 0.25em;
+        display: unset;
     }
 }

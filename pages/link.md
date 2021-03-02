@@ -1,9 +1,7 @@
 ---
-layout: default
+layout: page
 title: Link
 ---
-
-# Link
 
 This page is `/pages/link.md`.
 

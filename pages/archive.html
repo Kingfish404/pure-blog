@@ -19,7 +19,9 @@ title: Archive
                 <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
                 <span class="post-time">{{ post.date | date_to_string }}</span>
                 {% for tag in post.tags %}
-                <span class="tag">{{ tag }}</span>
+                <span class="tag">
+                    <a href="{{ site.baseurl }}{{ site.data.nav[2].url }}#{{ tag }}">{{ tag }}</a>
+                </span>
                 {% endfor %}
             </li>
             {%- if forloop.last or post_previous_year != post_year %}
