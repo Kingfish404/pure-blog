@@ -9,7 +9,7 @@ put your post in `_posts`,named it as `yyyy-MM-dd-xxxx-xxxx.md`.
 ## Run
 
 ```bash
-# dev runing
+# dev running
 bundle exec jekyll serve -l
 # final build
 bundle exec jekyll build

@@ -11,12 +11,7 @@ title: Home
 
 <h2>Recently Posts</h2>
 <ul class="post-list">
-    {% for post in site.posts %}
-
-    {% if forloop.index > site.post_num_index %}
-    {% continue %}
-    {% endif %}
-
+    {% for post in site.posts limit: site.max_posts %}
     <li class="post-index">
         <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
         <span class="post-time">{{ post.date | date_to_string }}</span>

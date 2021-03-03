@@ -30,7 +30,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
-post_num_index: 10
+max_posts: 10   # the max posts num display in Home page
 
 excerpt_separator: <!-- more -->  # set excerpt separator here
 

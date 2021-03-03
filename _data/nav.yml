@@ -1,7 +1,7 @@
 - title: Home
   url: /
-- title: Archive
-  url: /pages/archive
+- title: Posts
+  url: /pages/Posts
 - title: Tags
   url: /pages/tags
 - title: Link
