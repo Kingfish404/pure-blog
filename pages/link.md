@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Link
+comments: true
 ---
 
 This page is `/pages/link.md`.

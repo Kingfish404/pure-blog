@@ -102,6 +102,7 @@ pre.highlight{
         font-size: 4em;
         margin: auto;
         transition: all 1s;
+        word-break: break-word;
     }
     h1:hover{
         letter-spacing: 2px;
@@ -110,6 +111,7 @@ pre.highlight{
         font-size: large;
         max-width: 500px;
         margin: 1em auto;
+        word-break: break-word;
     }
     .main{
         margin: 0 0 50px;
