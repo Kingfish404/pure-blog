@@ -9,23 +9,27 @@ title: Tags
     <ul class="tag-list">
         {% for tag in site.tags %}
         <li>
-            <a href="#{{tag[0]}}">{{ tag[0] }}</a>
-            <span class="tag-size">{{ tag[1].size }}</span>
+            <a href="#{{tag[0]}}">
+                <span class="tag-name">{{ tag[0] }}</span>
+                <span class="tag-size">{{ tag[1].size }}</span>
+            </a>
         </li>
         {% endfor %}
     </ul>
 
     <div class="tag-post-list">
         {% for tag in site.tags %}
-        <h3 id="{{tag[0]}}">{{ tag[0] }}</h3>
-        <ul>
-            {% for post in tag[1] %}
-            <li>
-                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                <span class="tag-time">{{ post.date | date_to_string }} </span>
-            </li>
-            {% endfor %}
-        </ul>
+        <div id="{{tag[0]}}" class="tag-item">
+            <h3>{{ tag[0] }}</h3>
+            <ul>
+                {% for post in tag[1] %}
+                <li>
+                    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                    <span class="tag-time">{{ post.date | date_to_string }} </span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
         {% endfor %}
     </div>
 </div>

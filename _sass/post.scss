@@ -23,6 +23,10 @@
         text-decoration: none;
    }
 
+   table{
+       width: 100%;
+   }
+   
    img{
         width: 100%;
     }
@@ -50,11 +54,11 @@
 
    .tag{
         float: right;
-        margin:0 0.25em;
+        margin:0.375em 0.25em;
         user-select: none;
-        line-height: 2.25em;
-        padding: 0 0.1em;
-        background-color: unset;
+        line-height: 1.5em;
+        padding: 0 1em;
+        background-color: rgba(128, 128, 128, 0.11);
         border-radius: 0.25em;
         display: unset;
     }

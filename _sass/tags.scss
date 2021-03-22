@@ -2,6 +2,7 @@
     .tag-list{
         list-style: none;
         padding: 0;
+        user-select: none;
         
         li{
             display: inline-block;
@@ -17,16 +18,27 @@
         a{
             color: black;
         }
+        
+        .tag-name{
+            padding-right: 1em;
+        }
 
         .tag-size{
             min-width: 2em;
             text-align: center;
             float: right;
-            margin: auto  auto auto 0.5em;
+            margin: auto;
+            border-left: 1px solid rgba(128,128,128,0.11);
         }
     }
 
+    .tag-item{
+        display: none;
+    }
 
+    .tag-item:target{
+        display: unset;
+    }
     
     .tag-time{
         float: right;
