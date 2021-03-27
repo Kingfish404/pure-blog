@@ -25,6 +25,8 @@
 
    table{
        width: 100%;
+       word-wrap: break-word;
+       overflow-wrap: anywhere;
    }
    
    img{
@@ -47,6 +49,11 @@
         }
     }
 
+    svg{
+        width: 100%;
+        max-height: 100%;
+    }
+
    .post-date{
         display: inline-block;
         margin: 0.25em auto;
@@ -61,5 +68,19 @@
         background-color: rgba(128, 128, 128, 0.11);
         border-radius: 0.25em;
         display: unset;
+    }
+
+    #to_top{
+        user-select: none;
+        position: fixed;
+        bottom: -5em;
+        right: 2em;
+        padding: 0.5rem;
+        max-width: 1rem;
+        max-height: 5rem;
+        transition: 1.5s linear;
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.288);
+        background-color: white;
     }
 }

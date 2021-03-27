@@ -17,5 +17,27 @@ layout: default
     </span>
     {% endfor %}
     {{ content }}
+    <a id="to_top" href="#" rel="internal">
+        <svg t="1616419756836" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2185">
+            <path
+                d="M496.896 305.2544l-383.76448 383.76448a35.82976 35.82976 0 1 0 50.67776 50.67776l358.42048-358.42048 358.42048 358.42048a35.82976 35.82976 0 1 0 50.67776-50.67776l-383.76448-383.76448c-7.00416-7.00416-16.15872-10.496-25.344-10.496s-18.31936 3.50208-25.32352 10.496z"
+                fill="#515151" p-id="2186"></path>
+        </svg>
+    </a>
     {% include gitalk.html %}
+    <script>
+        let to_top = document.getElementById('to_top');
+        let html = document.getElementsByTagName('html')[0];
+        document.addEventListener('scroll', () => {
+            const scrollTop = html.scrollTop;
+            const contentHeight = html.scrollHeight;
+            const height = html.clientHeight;
+            if (scrollTop + height > contentHeight / 3) {
+                to_top.style.bottom = '30px';
+            } else {
+                to_top.style.bottom = '-100%';
+            }
+        })
+    </script>
 </div>

@@ -30,6 +30,11 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+descs:
+  - Write an awesome description for your new site here. 
+  - You can edit this in _config.yml.
+  - hello world!
+
 max_posts: 10   # the max posts num display in Home page
 
 # gitalk setting,enter clientID to enable

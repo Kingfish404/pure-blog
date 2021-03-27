@@ -1,3 +1,7 @@
+body,html{
+    scroll-behavior: smooth;
+}
+
 body{
     width: calc(100% - 16px);
     margin: 8px;
@@ -81,6 +85,11 @@ pre.highlight{
     border: 1px solid rgba(0, 0, 0, 0.288);
 }
 
+#descs_hide{
+    display: none;
+    visibility: hidden;
+}
+
 .container{
     min-height: 80vh;
     max-width: 850px;
@@ -102,18 +111,32 @@ pre.highlight{
     h1{
         font-size: 4em;
         margin: auto;
-        transition: all 1s;
+        transition: all ease 1s;
+        overflow-wrap: anywhere;
         word-break: break-word;
+        word-break: keep-all;
+        user-select: none;
+        cursor: pointer;
+
+        @include mobile{
+            font-size: 3em;
+        }
     }
+
     h1:hover{
         letter-spacing: 2px;
     }
+
     p{
         font-size: large;
         max-width: 500px;
-        margin: 1em auto;
+        margin: 1em auto 0;
+        min-height: 4.5em;
+        line-height: 1.5em;
         word-break: break-word;
+        word-break: keep-all;
     }
+
     .main{
         margin: 0 0 50px;
     }
@@ -210,3 +233,6 @@ pre.highlight{
     }
 }
 
+.see_more{
+    user-select: none;
+}

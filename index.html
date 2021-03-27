@@ -4,8 +4,13 @@ title: Home
 ---
 <div class="content">
     <div class="main">
-        <h1>{{ site.title }}</h1>
-        <p>{{ site.description }}</p>
+        <h1 id="site_title">{{ site.title }}</h1>
+        <p id="desc">{{ site.description }}</p>
+        <div id="descs_hide">
+            {% for desc in site.descs %}
+            <p>{{ desc }}</p>
+            {% endfor %}
+        </div>
     </div>
 </div>
 
@@ -29,6 +34,24 @@ title: Home
     </li>
     {% endfor %}
     <h2>
-        <a href="{{ site.baseurl }}{{ site.data.nav[1].url }}">See more</a>
+        <a class="see_more" href="{{ site.baseurl }}{{ site.data.nav[1].url }}">See more</a>
     </h2>
 </ul>
+<script>
+    function init() {
+        let desc = document.getElementById("desc");
+        let descs = document.getElementById("descs_hide");
+        let descs_num = Number("{{ site.descs.size }}");
+        document.getElementById("site_title").onclick = () => {
+            let desc_list = [];
+            for (let i of descs.children) {
+                if (i.innerText != desc.innerText) {
+                    desc_list.push(i.innerText);
+                }
+            }
+            let num = Math.floor(Math.random() * desc_list.length);
+            desc.innerText = desc_list[num];
+        };
+    }
+    init();
+</script>
