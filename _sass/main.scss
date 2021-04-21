@@ -9,6 +9,10 @@ body{
     position: absolute;
     overflow-y: overlay;
     font-family: "Times New Roman", Georgia, -apple-system, 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
+
+    img{
+        max-width: 100%;
+    }
 }
 
 ul li{
@@ -19,8 +23,13 @@ ul li{
 blockquote{
     border-left: 3px solid #cbcbcb;
     background: #f8f8f8;
-    padding: 0.25em 0.25em 0.25em 1em;
+    padding: 0.1em 1em 0.1em 1em;
     margin: 0;
+    margin-bottom: 1em;
+
+    p{
+        margin: 0.5em;
+    }
 }
 
 a{

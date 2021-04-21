@@ -1,73 +1,65 @@
 .post{
-   h1{
-        padding-bottom: 0.25em;
-        border-bottom: 2px solid rgba(158, 158, 158, 0.795);
-   }
-
-   p,li{
-        line-height: 1.75em;
-        word-break: break-word;
-        color: #333;
-   }
-
-   >p{
-        letter-spacing: 0.6px;
-   }
-
-   code{
-       line-height: 1.5em;
-   }
-
-   a{
-        word-break: break-word;
-        text-decoration: none;
-   }
-
-   table{
-       width: 100%;
-       word-wrap: break-word;
-       overflow-wrap: anywhere;
-   }
-   
-   img{
-        width: 100%;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;
+    word-wrap: break-word;
+    
+    h1{
+            padding-bottom: 0.25em;
+            border-bottom: 2px solid rgba(158, 158, 158, 0.795);
     }
 
-    pre{
-        overflow: auto;
-        white-space: pre-wrap;
+    p,li{
+            line-height: 1.5em;
+            word-break: break-word;
+            color: #333;
     }
 
-    li{
-        margin: 5px auto;
+    >p{
+            letter-spacing: 0.6px;
+    }
+
+    code{
+        line-height: 1.5em;
+    }
+
+    a{
+            word-break: break-word;
+            text-decoration: none;
     }
 
     table{
-
-        tr{
-            text-align: left;
-        }
+        width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: anywhere;
     }
+    
+    img{
+            width: 100%;
+        }
+
+        pre{
+            overflow: auto;
+            white-space: pre-wrap;
+        }
+
+        li{
+            margin: 5px auto;
+        }
+
+        table{
+
+            tr{
+                text-align: left;
+            }
+        }
 
     svg{
         width: 100%;
         max-height: 100%;
     }
 
-   .post-date{
-        display: inline-block;
-        margin: 0.25em auto;
-   }
-
-   .tag{
-        float: right;
-        margin:0.375em 0.25em;
-        user-select: none;
-        line-height: 1.5em;
-        padding: 0 1em;
-        background-color: rgba(128, 128, 128, 0.11);
-        border-radius: 0.25em;
-        display: unset;
+    .post-date{
+            display: inline-block;
+            margin: 0.25em auto;
     }
 
     #to_top{

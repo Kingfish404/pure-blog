@@ -1,3 +1,17 @@
+.post{
+    .tag{
+        float: right;
+        margin:0.375em 0.25em;
+        user-select: none;
+        line-height: 1.5em;
+        padding: 0 1em;
+        background-color: rgba(128, 128, 128, 0.11);
+        border-radius: 0.25em;
+        display: unset;
+        font-family: "Times New Roman", Georgia, -apple-system, 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
+    }
+}
+
 .tags{
     .tag-list{
         list-style: none;
