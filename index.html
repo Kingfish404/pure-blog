@@ -33,25 +33,27 @@ title: Home
         </div>
     </li>
     {% endfor %}
-    <h2>
-        <a class="see_more" href="{{ site.baseurl }}{{ site.data.nav[1].url }}">See more</a>
-    </h2>
 </ul>
+<h2>
+    <a class="see_more" href="{{ site.baseurl }}{{ site.data.nav[1].url }}">See more</a>
+</h2>
 <script>
     function init() {
-        let desc = document.getElementById("desc");
-        let descs = document.getElementById("descs_hide");
-        let descs_num = Number("{{ site.descs.size }}");
-        document.getElementById("site_title").onclick = () => {
-            let desc_list = [];
-            for (let i of descs.children) {
-                if (i.innerText != desc.innerText) {
-                    desc_list.push(i.innerText);
+        var desc = document.getElementById("desc");
+        var descs = document.getElementById("descs_hide");
+        var descs_num = Number("{{ site.descs.size }}");
+        function changeDesc() {
+            var desc_list = [];
+            var len = descs.children.length;
+            for (var i = 0; i < len; i++) {
+                if (descs.children[i].innerText != desc.innerText) {
+                    desc_list.push(descs.children[i].innerText);
                 }
             }
-            let num = Math.floor(Math.random() * desc_list.length);
+            var num = Math.floor(Math.random() * desc_list.length);
             desc.innerText = desc_list[num];
         };
-    }
+        document.getElementById("site_title").onclick = changeDesc;
+    };
     init();
 </script>

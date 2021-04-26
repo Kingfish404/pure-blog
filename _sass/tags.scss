@@ -2,6 +2,7 @@
     .tag{
         float: right;
         margin:0.375em 0.25em;
+        -webkit-user-select: none;
         user-select: none;
         line-height: 1.5em;
         padding: 0 1em;
@@ -16,12 +17,14 @@
     .tag-list{
         list-style: none;
         padding: 0;
+        -webkit-user-select: none;
         user-select: none;
         
         li{
             display: inline-block;
             margin: 0.25em;
             min-width: 5em;
+            -webkit-user-select: none;
             user-select: none;
             line-height: 2em;
             height: 2em;

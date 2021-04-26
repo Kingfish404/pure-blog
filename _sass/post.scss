@@ -29,6 +29,7 @@
     table{
         width: 100%;
         word-wrap: break-word;
+        overflow-wrap: break-word;
         overflow-wrap: anywhere;
     }
     
@@ -63,6 +64,9 @@
     }
 
     #to_top{
+        z-index: 999;
+        -ms-user-select: none;
+        -webkit-user-select: none;
         user-select: none;
         position: fixed;
         bottom: -5em;
@@ -70,7 +74,7 @@
         padding: 0.5rem;
         max-width: 1rem;
         max-height: 5rem;
-        transition: 1.5s linear;
+        transition: 3s linear;
         color: black;
         border: 1px solid rgba(0, 0, 0, 0.288);
         background-color: white;

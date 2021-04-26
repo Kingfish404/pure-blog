@@ -27,17 +27,18 @@ layout: default
     </a>
     {% include gitalk.html %}
     <script>
-        let to_top = document.getElementById('to_top');
-        let html = document.getElementsByTagName('html')[0];
-        document.addEventListener('scroll', () => {
-            const scrollTop = html.scrollTop;
-            const contentHeight = html.scrollHeight;
-            const height = html.clientHeight;
-            if (scrollTop + height > contentHeight / 3) {
+        var to_top = document.getElementById('to_top');
+        var html = document.getElementsByTagName('html')[0];
+        function scrollToTop() {
+            var scrollTop = html.scrollTop;
+            var contentHeight = html.scrollHeight;
+            var height = html.clientHeight;
+            if (scrollTop + height > contentHeight / 5) {
                 to_top.style.bottom = '30px';
             } else {
-                to_top.style.bottom = '-100%';
+                to_top.style.bottom = '-200%';
             }
-        })
+        };
+        document.addEventListener('scroll', scrollToTop);
     </script>
 </div>
