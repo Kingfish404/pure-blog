@@ -4,18 +4,23 @@ layout: default
 
 <div class="post">
     <h1>{{ page.title }}</h1>
-    <p class="post-date">
-        {{ page.date | date_to_string }}
-        {% if page.author %}
-        -
-        {{ page.author }}
-        {% endif %}
-    </p>
-    {% for tag in page.tags %}
-    <span class="tag">
-        <a href="{{ site.baseurl }}{{ site.data.nav[2].url }}#{{ tag }}">{{ tag }}</a>
-    </span>
-    {% endfor %}
+    <div class="post-meta">
+        <p class="post-date">
+            {{ page.date | date_to_string }}
+            {% if page.author %}
+            -
+            {{ page.author }}
+            {% endif %}
+        </p>
+        {% for tag in page.tags %}
+        <span class="tag">
+            <a href="{{ site.baseurl }}{{ site.data.nav[2].url }}#{{ tag }}">{{ tag }}</a>
+        </span>
+        {% endfor %}
+    </div>
+    {% if page.desc %}
+    <blockquote>{{ page.desc }}</blockquote>
+    {% endif %}
     {{ content }}
     <a id="to_top" href="#" rel="internal">
         <svg t="1616419756836" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"

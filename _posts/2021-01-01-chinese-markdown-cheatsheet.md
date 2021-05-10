@@ -3,9 +3,8 @@ layout: post
 title: Markdown cheatseet
 author: author 
 tags: [document]
+desc: This is a chinese markdown cheatseet
 comments: true
-toc: true
-pinned: true
 ---
 
 This chinese markdown cheatseet is from blog: <https://blog.shengbin.me/posts/markdown-syntax>。

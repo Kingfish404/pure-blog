@@ -26,7 +26,7 @@ title: Home
         </span>
         {% endfor %}
         <div class="post-excerpt">
-            {{ post.excerpt }}
+            {{ post.desc }}
         </div>
         <div class="div-line">
             <div class='underline'></div>
@@ -35,7 +35,8 @@ title: Home
     {% endfor %}
 </ul>
 <h2>
-    <a class="see_more" href="{{ site.baseurl }}{{ site.data.nav[1].url }}">See more</a>
+    <a class="see_more" href="{{ site.baseurl }}{{ site.data.nav[1].url }}" alt="see more" destination="see more">
+        See more posts</a>
 </h2>
 <script>
     function init() {

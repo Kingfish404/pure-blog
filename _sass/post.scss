@@ -59,8 +59,12 @@
     }
 
     .post-date{
-            display: inline-block;
-            margin: 0.25em auto;
+        display: inline-block;
+        margin: 0.25em auto;
+
+        @include mobile{
+            display: block;
+        }
     }
 
     #to_top{
@@ -79,4 +83,9 @@
         border: 1px solid rgba(0, 0, 0, 0.288);
         background-color: white;
     }
+}
+
+.post-meta{
+    display: inline-block;
+    width: 100%;
 }
