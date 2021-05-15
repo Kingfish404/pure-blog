@@ -1,12 +1,27 @@
 <!doctype html>
 <html lang="{{ site.lang }}">
-  {% include head.html %}
-  <body>
+{% include head.html %}
+
+<body>
     {% include nav.html %}
     <div class="container">
         {{ content }}
     </div>
     {% include footer.html %}
     {% include script.html %}
-  </body>
+
+    <script>
+        // 初始化nav的动画设置
+        function init() {
+            var nav_underlines = document.getElementsByClassName('underline');
+            if (nav_underlines) {
+                for (var i = 0; i < nav_underlines.length; ++i) {
+                    nav_underlines[i].style.transition = '0.25s all';
+                }
+            }
+        }
+        init();
+    </script>
+</body>
+
 </html>

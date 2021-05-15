@@ -77,3 +77,6 @@ exclude:
   - LICENSE
   - README.md
   - .gitignore
+  - gulpfile.js
+  - package.json
+  - package-lock.json

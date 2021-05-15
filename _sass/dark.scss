@@ -1,0 +1,76 @@
+@media (prefers-color-scheme: dark) {
+    html,
+    body {
+        background-color: #0a0c10;
+        color: #f0f6fc;
+    }
+
+    a {
+        color: #58a6ff;
+    }
+
+    blockquote {
+        background-color: #0e1116;
+    }
+
+    footer a {
+        color: #58a6ff;
+    }
+
+    .tag a {
+        color: #f0f6fc;
+    }
+
+    .tags {
+        a {
+            color: #58a6ff;
+        }
+        .tag-list a {
+            color: #f0f6fc;
+        }
+        .tag-list .tag-name {
+            color: #f0f6fc;
+        }
+    }
+
+    .post pre {
+        background-color: #171b21;
+    }
+
+    .post-list h1 a,
+    .post-list h2 a,
+    .post-list h3 a,
+    .post-list h4 a,
+    .post-list h5 a,
+    .post-list h6 a {
+        color: #58a6ff;
+    }
+
+    nav span .underline,
+    .nav span a,
+    .underline {
+        color: #f0f6fc;
+    }
+
+    nav span .underline,
+    .nav span .underline {
+        background-color: #f0f6fc;
+    }
+
+    .post #to_top {
+        background-color: #171b21;
+    }
+
+    .gt-container .gt-meta {
+        border-bottom: 1px solid #858585 !important;
+    }
+
+    .gt-container .gt-header-textarea {
+        color: #f0f6fc;
+        background-color: #080a0f !important;
+    }
+
+    .gt-container .gt-ico-github svg {
+        fill: #f0f6fc !important;
+    }
+}

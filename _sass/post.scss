@@ -1,73 +1,72 @@
-.post{
-    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;
+.post {
+    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
     word-wrap: break-word;
-    
-    h1{
-            padding-bottom: 0.25em;
-            border-bottom: 2px solid rgba(158, 158, 158, 0.795);
+
+    h1 {
+        padding-bottom: 0.25em;
+        border-bottom: 2px solid rgba(158, 158, 158, 0.795);
     }
 
-    p,li{
-            line-height: 1.5em;
-            word-break: break-word;
-            color: #333;
+    p,
+    li {
+        line-height: 1.5em;
+        word-break: break-word;
     }
 
-    >p{
-            letter-spacing: 0.6px;
+    > p {
+        letter-spacing: 0.6px;
     }
 
-    code{
+    code {
         line-height: 1.5em;
     }
 
-    a{
-            word-break: break-word;
-            text-decoration: none;
+    a {
+        word-break: break-word;
+        text-decoration: none;
     }
 
-    table{
+    table {
         width: 100%;
         word-wrap: break-word;
         overflow-wrap: break-word;
         overflow-wrap: anywhere;
     }
-    
-    img{
-            width: 100%;
+
+    img {
+        width: 100%;
+    }
+
+    pre {
+        overflow: auto;
+        white-space: pre-wrap;
+    }
+
+    li {
+        margin: 5px auto;
+    }
+
+    table {
+        tr {
+            text-align: left;
         }
+    }
 
-        pre{
-            overflow: auto;
-            white-space: pre-wrap;
-        }
-
-        li{
-            margin: 5px auto;
-        }
-
-        table{
-
-            tr{
-                text-align: left;
-            }
-        }
-
-    svg{
+    svg {
         width: 100%;
         max-height: 100%;
     }
 
-    .post-date{
+    .post-date {
         display: inline-block;
         margin: 0.25em auto;
 
-        @include mobile{
+        @include mobile {
             display: block;
         }
     }
 
-    #to_top{
+    #to_top {
         z-index: 999;
         -ms-user-select: none;
         -webkit-user-select: none;
@@ -85,7 +84,7 @@
     }
 }
 
-.post-meta{
+.post-meta {
     display: inline-block;
     width: 100%;
 }

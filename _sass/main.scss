@@ -1,51 +1,55 @@
-body,html{
+body,
+html {
     scroll-behavior: auto;
     scroll-behavior: smooth;
 }
 
-body{
+body {
     width: calc(100% - 16px);
     margin: 8px;
     min-height: calc(100% - 16px);
     position: absolute;
     overflow-y: overlay;
-    font-family: "Times New Roman", Georgia, -apple-system, 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
+    font-family: "Times New Roman", Georgia, -apple-system, "Nimbus Roman No9 L", "PingFang SC", "Hiragino Sans GB",
+        "Noto Serif SC", "Microsoft Yahei", "WenQuanYi Micro Hei", "ST Heiti", sans-serif;
 
-    img{
+    img {
         max-width: 100%;
     }
 }
 
-header{
+header {
     display: block;
 }
 
-ul li{
+ul li {
     list-style: circle;
     line-height: 1.75em;
 }
 
-blockquote{
+blockquote {
     border-left: 3px solid #cbcbcb;
     background: #f8f8f8;
     padding: 0.1em 1em 0.1em 1em;
     margin: 0;
     margin-bottom: 1em;
+    line-height: 1.75em;
 
-    p{
+    p {
         margin: 0.5em;
     }
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-span{
+span {
     display: inline-block;
 }
 
-nav,.nav{
+nav,
+.nav {
     width: 100%;
     max-width: 1080px;
     margin: auto;
@@ -55,15 +59,15 @@ nav,.nav{
     -webkit-user-select: none;
     user-select: none;
 
-    .nav{
+    .nav {
         display: contents;
     }
 
-    span{
+    span {
         flex: auto;
         min-width: 10vw;
         padding: 0 0.5em;
-        a{
+        a {
             width: 100%;
             height: 23px;
             line-height: 20px;
@@ -71,22 +75,19 @@ nav,.nav{
             color: black;
             text-decoration: none;
         }
-        .underline{
+        .underline {
             width: 100%;
             height: 2px;
-            visibility: hidden;
-            transition: 0.25s all;
             background-color: black;
             transform: scale(0);
         }
     }
-    span:hover .underline{
-        visibility: visible;
+    span:hover .underline {
         transform: scale(1);
     }
 }
 
-footer{
+footer {
     width: 100%;
     max-width: 1080px;
     margin: auto;
@@ -95,41 +96,46 @@ footer{
     margin-top: 2em;
     margin-bottom: 1em;
 
-    p{
+    p {
         margin: 5px auto;
     }
 
-    span{
+    span {
         margin: 0.5em;
     }
 
-    a{
+    a {
         color: #0031a7;
         text-decoration: none;
     }
 }
 
-pre.highlight{
+pre.highlight {
     padding: 1em;
     border: 1px solid rgba(0, 0, 0, 0.288);
 }
 
-#descs_hide{
+.highlight,
+pre.highlight {
+    border-radius: 10px;
+}
+
+#descs_hide {
     display: none;
     visibility: hidden;
 }
 
-.container{
+.container {
     min-height: 80vh;
     max-width: 850px;
     margin: auto;
     padding: 0 2.5em;
-    @include mobile{
+    @include mobile {
         padding: 0 0.5em;
     }
 }
 
-.content{
+.content {
     height: calc(100vh - 30px);
     text-align: center;
     font-size: xx-large;
@@ -137,13 +143,13 @@ pre.highlight{
     justify-content: center;
     align-items: center;
 
-    &::after{
-        content: '';
+    &::after {
+        content: "";
         min-height: inherit;
         font-size: 0;
     }
 
-    h1{
+    h1 {
         font-size: 4em;
         margin: auto;
         transition: all ease 1s;
@@ -157,17 +163,17 @@ pre.highlight{
         cursor: pointer;
         padding: 0.15em 0.25em 0em;
 
-        @include mobile{
+        @include mobile {
             font-size: 2.5em;
             padding: 0.15rem 0.5rem 0em;
         }
     }
 
-    h1:hover{
+    h1:hover {
         letter-spacing: 1px;
     }
 
-    p{
+    p {
         font-size: large;
         max-width: 80vw;
         margin: 1em auto 0;
@@ -178,30 +184,30 @@ pre.highlight{
         word-break: keep-all;
     }
 
-    #desc{
+    #desc {
         border-radius: 0.5em;
         padding: 0.5em;
         max-width: 325px;
     }
 
-    .main{
+    .main {
         margin: 0 0 50px;
     }
 }
 
-.post-list{
+.post-list {
     max-width: 960px;
     padding: 0;
     margin: auto;
 
-    h2{
+    h2 {
         font-weight: normal;
     }
 
-    .div-line{
+    .div-line {
         border-bottom: 2px solid rgba(109, 109, 109, 0.445);
 
-        .underline{
+        .underline {
             width: 100%;
             height: 2px;
             transition: 0.5s all ease-in-out;
@@ -212,17 +218,17 @@ pre.highlight{
         }
     }
 
-    .post-index{
+    .post-index {
         list-style: none;
         margin-top: 1em;
         margin-bottom: 1em;
 
-        h2{
+        h2 {
             font-weight: bold;
             font-size: larger;
         }
 
-        p{
+        p {
             margin: 5px;
             font-size: medium;
             overflow: hidden;
@@ -230,58 +236,63 @@ pre.highlight{
             line-height: 1.5em;
             max-height: 1.5em;
         }
-        .post-excerpt{
+        .post-excerpt {
             overflow: hidden;
         }
     }
-    .post-index:hover .underline{
+    .post-index:hover .underline {
         transform: scale(1);
     }
 
-    .post-archive{
+    .post-archive {
         margin: 0.5em auto;
     }
 
-    h1,h2,h3,h4,h5,h6{
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         display: contents;
         font-size: medium;
-        a{
+        a {
             text-decoration: none;
             color: #0031a7;
         }
     }
 
-    a{
+    a {
         line-height: 1.5em;
     }
 
-    .post-time{
+    .post-time {
         float: right;
         line-height: 1.5em;
     }
 }
 
-.tag{
+.tag {
     float: right;
-    margin:0 0.25em;
+    margin: 0 0.25em;
     -webkit-user-select: none;
     user-select: none;
     line-height: 1.5em;
     padding: 0 0.5em;
-    background-color: rgba(128,128,128,0.11);
+    background-color: rgba(128, 128, 128, 0.11);
     border-radius: 0.25em;
 
-    a{
+    a {
         color: black;
         text-decoration: none;
     }
 
-    @include mobile{
+    @include mobile {
         display: none;
     }
 }
 
-.see_more{
+.see_more {
     -webkit-user-select: none;
     user-select: none;
 }

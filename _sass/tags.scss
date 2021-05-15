@@ -1,7 +1,7 @@
-.post{
-    .tag{
+.post {
+    .tag {
         float: right;
-        margin:0.375em 0.25em;
+        margin: 0.375em 0.25em;
         -webkit-user-select: none;
         user-select: none;
         line-height: 1.5em;
@@ -9,22 +9,23 @@
         background-color: rgba(128, 128, 128, 0.11);
         border-radius: 0.25em;
         display: unset;
-        font-family: "Times New Roman", Georgia, -apple-system, 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
+        font-family: "Times New Roman", Georgia, -apple-system, "Nimbus Roman No9 L", "PingFang SC", "Hiragino Sans GB",
+            "Noto Serif SC", "Microsoft Yahei", "WenQuanYi Micro Hei", "ST Heiti", sans-serif;
 
-        @include mobile{
+        @include mobile {
             float: left;
         }
     }
 }
 
-.tags{
-    .tag-list{
+.tags {
+    .tag-list {
         list-style: none;
         padding: 0;
         -webkit-user-select: none;
         user-select: none;
-        
-        li{
+
+        li {
             display: inline-block;
             margin: 0.25em;
             min-width: 5em;
@@ -37,36 +38,36 @@
             border-radius: 0.25em;
         }
 
-        a{
+        a {
             color: black;
         }
-        
-        .tag-name{
+
+        .tag-name {
             padding-right: 1em;
         }
 
-        .tag-size{
+        .tag-size {
             min-width: 2em;
             text-align: center;
             float: right;
             margin: auto;
-            border-left: 1px solid rgba(128,128,128,0.11);
+            border-left: 1px solid rgba(128, 128, 128, 0.11);
         }
     }
 
-    .tag-item{
+    .tag-item {
         display: none;
     }
 
-    .tag-item:target{
+    .tag-item:target {
         display: unset;
     }
-    
-    .tag-time{
+
+    .tag-time {
         float: right;
     }
-    
-    a{
+
+    a {
         color: #0031a7;
         text-decoration: none;
     }
