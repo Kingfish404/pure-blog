@@ -57,8 +57,13 @@
         background-color: #f0f6fc;
     }
 
-    .post #to_top {
+    .post .round {
         background-color: #171b21;
+        color: #f0f6fc;
+    }
+
+    #to_top svg {
+        fill: #f0f6fc;
     }
 
     .gt-container .gt-meta {
@@ -72,5 +77,13 @@
 
     .gt-container .gt-ico-github svg {
         fill: #f0f6fc !important;
+    }
+
+    #toc {
+        background-color: #0e1116;
+    }
+
+    #toc a {
+        color: #f0f6fc;
     }
 }

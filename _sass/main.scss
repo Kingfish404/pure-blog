@@ -55,6 +55,7 @@ nav,
     margin: auto;
     text-align: center;
     display: flex;
+    justify-content: center;
     height: 30px;
     -webkit-user-select: none;
     user-select: none;
@@ -118,6 +119,34 @@ pre.highlight {
 .highlight,
 pre.highlight {
     border-radius: 10px;
+}
+
+#uv_count,#pv_count {
+    margin: 0 0 0 0.25rem;
+}
+
+#star {
+    text-align: right;
+}
+
+#star_btn {
+    display: inline-block;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    padding: 3px;
+}
+
+#star_num {
+    border-radius: 0 0.2rem 0.2rem 0;
+    background-color: rgba(128, 128, 128, 0.11);
+    padding: 3px;
+}
+
+.is_star {
+    border-radius: 0.2rem 0 0 0.2rem;
+    background-color: rgba(128, 128, 128, 0.11);
 }
 
 #descs_hide {
@@ -192,6 +221,12 @@ pre.highlight {
 
     .main {
         margin: 0 0 50px;
+    }
+}
+
+.post-title-pinned {
+    ::before {
+        content: "> ";
     }
 }
 

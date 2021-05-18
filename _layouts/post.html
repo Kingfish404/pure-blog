@@ -22,28 +22,84 @@ layout: default
     <blockquote>{{ page.desc }}</blockquote>
     {% endif %}
     {{ content }}
-    <a id="to_top" href="#" rel="internal">
-        <svg t="1616419756836" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            p-id="2185">
-            <path
-                d="M496.896 305.2544l-383.76448 383.76448a35.82976 35.82976 0 1 0 50.67776 50.67776l358.42048-358.42048 358.42048 358.42048a35.82976 35.82976 0 1 0 50.67776-50.67776l-383.76448-383.76448c-7.00416-7.00416-16.15872-10.496-25.344-10.496s-18.31936 3.50208-25.32352 10.496z"
-                fill="#515151" p-id="2186"></path>
-        </svg>
-    </a>
+    <div id="tools">
+        <a id="to_top" class="round" href="#" rel="internal">
+            <svg t="1616419756836" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                p-id="2185">
+                <path
+                    d="M496.896 305.2544l-383.76448 383.76448a35.82976 35.82976 0 1 0 50.67776 50.67776l358.42048-358.42048 358.42048 358.42048a35.82976 35.82976 0 1 0 50.67776-50.67776l-383.76448-383.76448c-7.00416-7.00416-16.15872-10.496-25.344-10.496s-18.31936 3.50208-25.32352 10.496z"
+                    p-id="2186"></path>
+            </svg>
+        </a>
+        <div id="show_toc" class="round">
+            <span>=</span>
+        </div>
+    </div>
+    {% if site.leadcloud.appId %}
+    <div id="star">
+        <span id="star_btn" class="">Star </span>
+        <span id="star_num">0</span>
+    </div>
+    {% endif %}
     {% include gitalk.html %}
     <script>
-        var to_top = document.getElementById('to_top');
-        var html = document.getElementsByTagName('html')[0];
         function scrollToTop() {
+            var to_top = document.getElementById('to_top');
+            var html = document.getElementsByTagName('html')[0];
             var scrollTop = html.scrollTop;
             var contentHeight = html.scrollHeight;
             var height = html.clientHeight;
             if (scrollTop + height > contentHeight / 5) {
-                to_top.style.bottom = '30px';
+                to_top.style.bottom = '80px';
             } else {
                 to_top.style.bottom = '-200%';
             }
         };
+        function initToc() {
+            var body = document.getElementsByTagName('body')[0];
+            var toc = document.createElement('div');
+            var titles = document.getElementsByTagName('h2');
+            toc.id = "toc";
+            var item = document.createElement('a');
+            item.innerHTML = "TOP";
+            item.href = "#";
+            toc.appendChild(item);
+
+            for (var i = 0; i < titles.length; i++) {
+                var item = document.createElement('a');
+                item.innerHTML = String(i + 1) + ". " + titles[i].innerText;
+                item.href = "#" + titles[i].id;
+                toc.style.width = "0px";
+                toc.appendChild(item);
+            }
+
+            var is_toc_show = localStorage.getItem('is_toc_show');
+            if (is_toc_show && is_toc_show == 'true') {
+                toc.style.width = "";
+            } else {
+                toc.style.width = "0px";
+            }
+
+            var item = document.createElement('a');
+            item.innerHTML = "Close";
+            item.onclick = function () {
+                document.getElementById('toc').style.width = "0px";
+            }
+            toc.appendChild(item);
+
+            body.appendChild(toc);
+        }
         document.addEventListener('scroll', scrollToTop);
+        document.getElementById('show_toc').onclick = function (event) {
+            var toc = document.getElementById('toc');
+            if (String(toc.style.width) == "") {
+                toc.style.width = "0px";
+                localStorage.setItem('is_toc_show', false);
+            } else {
+                toc.style.width = "";
+                localStorage.setItem('is_toc_show', true);
+            }
+        }
+        initToc();
     </script>
 </div>

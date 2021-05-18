@@ -1,0 +1,27 @@
+<script>
+    function generateUid() {
+        var uid = localStorage.getItem('uid');
+        if (!uid) {
+            uid = String(window.screen.availHeight) + '-' +
+                String(window.screen.availWidth) + '-' +
+                String(window.screen.colorDepth) + '-' +
+                String(Date.now()) + '-' +
+                String(Math.random()).substring(3, 10);
+            localStorage.setItem('uid', uid);
+        }
+        return uid;
+    }
+
+    var uid = generateUid();
+</script>
+{% if site.leadcloud.appId %}
+<script src="https://pv.sohu.com/cityjson" defer></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.10.1/dist/av-min.js" defer></script>
+<script>
+    var leancloud = {};
+    leancloud.appId = "{{ site.leadcloud.appId }}";
+    leancloud.appKey = "{{ site.leadcloud.appKey }}";
+    leancloud.serverURL = "{{ site.url }}";
+</script>
+<script src="{{ site.baseurl }}/assets/js/leancloud.js" defer></script>
+{% endif %}
