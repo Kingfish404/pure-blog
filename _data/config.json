@@ -1,0 +1,16 @@
+{
+  "title": "Pure-Blog",
+  "motto": [
+    "探索世界的好奇心万岁",
+    "λf.(λx.f(xx))(λx.f(xx))"
+  ],
+  "desc": "This is a blog template",
+  "links": [
+    {
+      "name": "Github",
+      "link": "https://github.com/Kingfish404/pure-blog/"
+    }
+  ],
+  "recentNum": 10,
+  "author": ""
+}

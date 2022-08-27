@@ -1,0 +1,24 @@
+.posts {
+  max-width: 900px;
+  margin: auto;
+}
+
+.toc {
+  width: 120px;
+  position: absolute;
+  left: calc(((100vw - 900px) / 2) - 120px);
+  margin-top: 24px;
+  padding-bottom: 124px;
+  display: inline-block;
+  border-right: 1px solid #ebebeb;
+
+  li {
+    list-style: none;
+    margin: 24px 0;
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
+}

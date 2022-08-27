@@ -1,0 +1,49 @@
+.post {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 1em;
+
+  * {
+    line-height: 1.6em;
+  }
+
+  h1 {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+
+    @media screen and (max-width: 600px) {
+      font-size: 28px;
+    }
+  }
+
+  code > span {
+    overflow: auto;
+  }
+
+  a {
+    color: #7952b3;
+  }
+
+  time {
+    color: #5a5a5a;
+    font-size: 24px;
+
+    @media screen and (max-width: 600px) {
+      font-size: 24px;
+    }
+  }
+
+  pre {
+    overflow-x: scroll;
+  }
+
+  iframe {
+    width: 100%;
+    min-height: 450px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

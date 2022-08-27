@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "semi": [
+      1,
+      "always"
+    ],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ]
+  },
+  "extends": "next/core-web-vitals"
+}

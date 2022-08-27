@@ -1,0 +1,32 @@
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  :hover {
+    color: #7952b3;
+  }
+
+  a {
+    font-size: x-large;
+    font-weight: normal;
+    font-family: "Source Han Sans CN", "Courier New", Courier, monospace;
+    line-height: 1.5em;
+
+    flex-shrink: 1;
+    flex-basis: 100px;
+    text-align: center;
+    margin: 40px 10px 40px;
+
+    color: #424242;
+
+    @media screen and (max-width: 600px) {
+      margin-top: 30px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.main {
+  min-height: 700px;
+}

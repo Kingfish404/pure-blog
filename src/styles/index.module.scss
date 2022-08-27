@@ -1,0 +1,134 @@
+.links {
+  margin: 40px auto 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+
+  a {
+    height: 40px;
+    font-size: 18px;
+    font-size: large;
+    font-weight: bold;
+    margin: 25px;
+    cursor: pointer;
+    background-color: unset;
+    outline: none;
+    border: none;
+    padding-bottom: 3px;
+  }
+}
+
+.tab {
+  min-height: 100vh;
+  max-width: 900px;
+  margin: auto;
+
+  section {
+    min-height: 65vh;
+  }
+
+  ul {
+    padding-inline: 0;
+  }
+
+  h2 {
+    padding: 0 1rem;
+  }
+}
+
+.tags {
+  margin: 24px auto;
+  max-width: 700px;
+
+  li {
+    display: inline-block;
+    margin: 5px 16px;
+
+    span {
+      margin: 0 2px;
+    }
+  }
+}
+
+.tagPosts {
+  height: 300px;
+  min-height: 50vh;
+  overflow-y: scroll;
+  max-width: 700px;
+  margin: auto;
+
+  h3 {
+    padding: 0 16px;
+    margin-top: 0;
+  }
+
+  li {
+    padding: 4px 16px;
+
+    ul {
+      a {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.friendLinks {
+  max-width: 700px;
+  margin: auto;
+  padding-inline: 0;
+
+  li {
+    list-style: circle;
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0.5em;
+  }
+}
+
+.linkContent {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6em;
+
+  column-width: 400px;
+  column-gap: 50px;
+  padding: 24px;
+
+  h2 {
+    margin: 0;
+    max-width: 200px;
+    padding-bottom: 0.2em;
+    border-bottom: 3px solid #dadada;
+    word-wrap: break-word;
+
+    @media screen and (max-width: 1280px) {
+      max-width: unset;
+    }
+  }
+
+  ul {
+    break-inside: avoid;
+  }
+}
+
+.temp {
+  margin: 24px;
+}
+
+.more {
+  margin: auto;
+  max-width: 900px;
+  text-align: right;
+  padding: 0 24px;
+
+  a {
+    padding-bottom: 0.25em;
+    border-bottom: 2px solid black;
+  }
+}

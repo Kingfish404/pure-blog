@@ -1,0 +1,26 @@
+.footer {
+  width: 100%;
+  text-align: center;
+  color: #5a5a5a;
+
+  span:nth-last-child(n + 2)::after {
+    content: "|";
+    font-size: 1.2em;
+    @media screen and (max-width: 600px) {
+      content: "";
+    }
+  }
+
+  a,
+  span,
+  abbr {
+    margin: 0 5px;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    span {
+      display: block;
+    }
+  }
+}
