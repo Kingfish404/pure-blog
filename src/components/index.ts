@@ -1,8 +1,4 @@
 export {
-  LayoutDefault
-} from './layouts/default';
-
-export {
   Links
 } from './links';
 

@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import { ReactElement, useEffect } from 'react';
 import { NextPageWithLayout } from './_app';
-import * as components from '../components';
+import Config from '../../_data/config.json';
+import * as layout from '../layouts';
 
 const Page: NextPageWithLayout = (props: any) => {
 
@@ -18,31 +19,30 @@ const Page: NextPageWithLayout = (props: any) => {
       }
       window.location.replace(finalHref);
     }
-    return () => {
-    };
+    return () => { };
   });
 
   return (
     <>
       <Head>
-        <title>404 - Kingfish404</title>
+        <title>{`404 - ${Config.title}`}</title>
       </Head>
       <div>
         <p>404 | This page could not be found</p>
       </div>
-      <style jsx>{`
-              div {
-                color: #000;
-                background: #fff;
-                font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Fira Sans", Avenir, "Helvetica Neue", "Lucida Grande", sans-serif;
-                height: 100vh;
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-              }
-            `}</style>
+      <style
+        jsx>{`
+        div {
+          color: #000;
+          background: #fff;
+          font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Fira Sans", Avenir, "Helvetica Neue", "Lucida Grande", sans-serif;
+          height: 100vh;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }`}</style>
     </>
   );
 };
@@ -51,8 +51,8 @@ export default Page;
 
 Page.getLayout = function getLayout(page: ReactElement) {
   return (
-    <components.LayoutDefault>
+    <layout.LayoutDefault>
       {page}
-    </components.LayoutDefault>
+    </layout.LayoutDefault>
   );
 };

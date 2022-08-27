@@ -1,4 +1,6 @@
 import styles from '../styles/components.module.scss';
+import * as lib from '../lib';
+import Config from '../../_data/config.json';
 
 export function Footer() {
   return (
@@ -9,7 +11,7 @@ export function Footer() {
           &amp;
           <a href="https://reactjs.org/">React</a>
         </span>
-        <span>Copyright&copy;<a href="https://kingfish404.cn/">Jin Yu</a></span>
+        <span>Copyright&copy;<a href={Config.authorLink}>{Config.author}</a></span>
       </p>
       <p>Design by
         <a href="https://dribbble.com/ArleneXu" target="_blank" rel="noreferrer" >Arlene Xu</a>

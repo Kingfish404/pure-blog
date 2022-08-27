@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
+import Config from '../../_data/config.json';
 import * as lib from '../lib';
 
 class MyDocument extends Document<DocumentInitialProps> {
@@ -11,8 +12,8 @@ class MyDocument extends Document<DocumentInitialProps> {
     return (
       <Html lang='zh-CN'>
         <Head>
-          <meta itemProp="name" content="Kingfish404" />
-          <meta name="description" content="Stay curious,stay naive. Jin Yu's Blog." />
+          <meta itemProp="name" content={Config.title} />
+          <meta name="description" content={Config.desc} />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>

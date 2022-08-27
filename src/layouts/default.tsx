@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import type { ReactElement } from 'react';
-import { Footer } from '../footer';
-import styles from '../../styles/layouts/default.module.scss';
+import { GetStaticProps, GetStaticPropsContext } from 'next';
+import * as components from '../components';
+import * as lib from '../lib';
+import styles from '../styles/layouts/default.module.scss';
 
 export function LayoutDefault({ children, showFooter = true }: { children: ReactElement, showFooter?: boolean }) {
 
@@ -28,8 +30,7 @@ export function LayoutDefault({ children, showFooter = true }: { children: React
         {/* Fix the tocbot.js positionFixedSelector className error */}
         <div className={'toc'} />
       </main>
-      {showFooter && <Footer />}
+      {showFooter && <components.Footer />}
     </>
   );
 }
-

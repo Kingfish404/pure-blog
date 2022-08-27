@@ -3,7 +3,9 @@ import { GetStaticProps, GetStaticPropsContext } from 'next';
 import { ReactElement } from "react";
 import { NextPageWithLayout } from "../_app";
 import * as lib from '../../lib';
+import * as layout from '../../layouts';
 import * as components from '../../components';
+import Config from '../../../_data/config.json';
 import styles from '../../styles/pages/about.module.scss';
 
 const About: NextPageWithLayout = (props: AboutProps) => {
@@ -12,7 +14,7 @@ const About: NextPageWithLayout = (props: AboutProps) => {
   return (
     <>
       <Head>
-        <title>About - Kingfish404</title>
+        <title>{`About - ${Config.title}`}</title>
       </Head>
       <components.HeadContent
         desc={config.desc}
@@ -31,9 +33,9 @@ export default About;
 
 About.getLayout = function getLayout(page: ReactElement) {
   return (
-    <components.LayoutDefault>
+    <layout.LayoutDefault>
       {page}
-    </components.LayoutDefault>
+    </layout.LayoutDefault>
   );
 };
 

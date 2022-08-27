@@ -2,9 +2,11 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { ReactElement, useEffect, useRef } from "react";
 import { NextPageWithLayout } from "../_app";
+import * as layout from '../../layouts';
 import * as components from "../../components";
 import * as lib from '../../lib';
 import * as tocbot from 'tocbot';
+import Config from '../../../_data/config.json';
 import styles from '../../styles/pages/posts.module.scss';
 
 const Posts: NextPageWithLayout = (props: any) => {
@@ -31,7 +33,7 @@ const Posts: NextPageWithLayout = (props: any) => {
   return (
     <>
       <Head>
-        <title>Posts - Kingfish404</title>
+        <title>{`Posts - ${Config.title}`}</title>
       </Head>
       <div className={'toc ' + styles.toc} />
       <div className={'toc-content ' + styles.posts}>
@@ -60,9 +62,9 @@ export default Posts;
 
 Posts.getLayout = function getLayout(page: ReactElement) {
   return (
-    <components.LayoutDefault>
+    <layout.LayoutDefault>
       {page}
-    </components.LayoutDefault>
+    </layout.LayoutDefault>
   );
 };
 

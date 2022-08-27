@@ -8,9 +8,10 @@
   "links": [
     {
       "name": "Github",
-      "link": "https://github.com/Kingfish404/pure-blog/"
+      "link": "https://github.com/"
     }
   ],
   "recentNum": 10,
-  "author": ""
+  "author": "",
+  "authorLink": ""
 }

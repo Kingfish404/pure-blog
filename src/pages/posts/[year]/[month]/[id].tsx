@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import { ReactElement } from "react";
 import { NextPageWithLayout } from "../../../_app";
+import * as layout from '../../../../layouts';
 import * as components from "../../../../components";
 import * as lib from "../../../../lib";
 import styles from '../../../../styles/posts/post.module.scss';
@@ -25,7 +26,7 @@ const Post: NextPageWithLayout = (props: any) => {
         })}
         <blockquote>{props.desc}</blockquote>
         <div dangerouslySetInnerHTML={{ __html: props.body }} />
-        <components.Comment />
+        {props.url && <components.Comment url={props.url} />}
       </div>
     </>
   );
@@ -35,9 +36,9 @@ export default Post;
 
 Post.getLayout = function getLayout(page: ReactElement) {
   return (
-    <components.LayoutDefault>
+    <layout.LayoutDefault>
       {page}
-    </components.LayoutDefault>
+    </layout.LayoutDefault>
   );
 };
 
@@ -66,6 +67,7 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
       ...postData.head,
       body: postData.body,
       config,
+      url: lib.DISQUS_ID,
     }
   };
 };

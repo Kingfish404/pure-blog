@@ -4,14 +4,20 @@ import { marked } from 'marked';
 
 const dataDirectory = path.join(process.cwd(), '_data');
 
-export async function getConfig(): Promise<{
-  title: string,
-  motto?: string,
-  desc?: string,
-  links?: Array<{ name: string, link: string }>,
-  recentNum?: number,
-  author: string,
-}> {
+export type Config = {
+  title: string;
+  motto?: string;
+  desc?: string;
+  links?: Array<{
+    name: string;
+    link: string;
+  }>;
+  recentNum?: number;
+  author: string;
+  authorLink: string;
+};
+
+export function getConfig(): Promise<Config> {
   const fileName = 'config.json';
   const filePath = path.join(dataDirectory, fileName);
   const str = fs.readFileSync(filePath, { encoding: 'utf8' });

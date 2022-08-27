@@ -7,6 +7,10 @@ declare global {
   }
 }
 
+export type {
+  Config
+} from './config';
+
 export {
   getConfig,
   getFriendLinks,
@@ -35,3 +39,6 @@ export {
 
 export { LC_APPID, LC_KEY }
   from './plugin/leadcloud';
+
+export { DISQUS_ID }
+  from './plugin/comment';

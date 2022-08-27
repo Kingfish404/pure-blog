@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { GetStaticProps, GetStaticPropsContext } from 'next';
 import { useState, ReactElement } from 'react';
 import { NextPageWithLayout } from './_app';
+import Config from '../../_data/config.json';
+import * as layout from '../layouts';
 import * as components from '../components';
 import * as lib from '../lib';
 import styles from '../styles/index.module.scss';
@@ -37,7 +39,7 @@ const Page: NextPageWithLayout = (props: any) => {
   return (
     <>
       <Head>
-        <title>Blog - Kingfish404</title>
+        <title>{`Blog - ${Config.title}`}</title>
       </Head>
       <components.HeadContent
         {...config}
@@ -57,9 +59,9 @@ export default Page;
 
 Page.getLayout = function getLayout(page: ReactElement) {
   return (
-    <components.LayoutDefault>
+    <layout.LayoutDefault >
       {page}
-    </components.LayoutDefault>
+    </layout.LayoutDefault>
   );
 };
 
